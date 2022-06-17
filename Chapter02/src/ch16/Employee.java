@@ -2,7 +2,8 @@ package ch16;
 
 public class Employee {
 	
-	public static int serialNum = 1000;
+	// 외부에서 함부로 건들면 안되는 변수라 public -> private 변경
+	private static int serialNum = 1000;
 
 	private int employeeId;
 	private String employeeName;
@@ -15,6 +16,10 @@ public class Employee {
 		
 	}
 	
+	public static int getSerialNum() {
+		return serialNum;
+	}
+
 	public int getEmployeeId() {
 		return employeeId;
 	}
